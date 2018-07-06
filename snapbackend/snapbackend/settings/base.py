@@ -33,6 +33,7 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000 # higher than the count of fields
 
 INSTALLED_APPS = [
     'api',
+    'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
