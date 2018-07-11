@@ -1,9 +1,4 @@
-import os
-os.environ["DJANGO_SETTINGS_MODULE"] = "snapbackend.settings.production"
-import django
+from subprocess import call
 
-django.setup()
-import snapbackend
-from snapbackend.models import deleteCapsuleModels
-
-deleteCapsuleModels()
+if __name__ == "__main__":
+    call(["python3", "manage.py", "deleteDayOldCapsules"])
