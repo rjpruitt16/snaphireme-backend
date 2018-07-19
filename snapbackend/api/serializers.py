@@ -8,7 +8,9 @@ class SnapCapsuleSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = SnapCapsule
-        fields = ('user', 'dateToPost', 'image', 'caption', 'url', 'username')
+        fields = ('user', 'dateToPost', 'dateToDelete', 'image', 'caption',
+                  'url', 'username',
+                  )
 
     def validate_dateToPost(self, value):
         present = datetime.now()
