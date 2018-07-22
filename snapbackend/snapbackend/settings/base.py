@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'google.com',
-    'snaphireme.s3-website.us-west-1.amazonaws.com/SignUp',
+    'snaphireme.s3-website.us-west-1.amazonaws.com',
     'localhost:8000',
 )
 
