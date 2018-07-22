@@ -33,6 +33,7 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000 # higher than the count of fields
 
 INSTALLED_APPS = [
     'api',
+    'corsheaders',
     'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'snapbackend'
+
 ]
 
 MIDDLEWARE = [
@@ -52,7 +54,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'google.com',
+    'snaphireme.s3-website.us-west-1.amazonaws.com/SignUp',
+    'localhost:8000',
+)
 
 ROOT_URLCONF = 'snapbackend.urls'
 
