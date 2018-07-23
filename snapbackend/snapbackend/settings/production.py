@@ -1,10 +1,10 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["rjpruitt22.pythonanywhere.com"]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "images")
-MEDIA_URL = '/snapcapsule/'
+MEDIA_URL = '/snapcapsule/images/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
